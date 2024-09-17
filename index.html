@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simple Subtasks</h1>
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Tambahkan tugas baru">
+        <select id="priorityInput">
+            <option value="low">Rendah</option>
+            <option value="medium">Sedang</option>
+            <option value="high">Tinggu</option>
+        </select>
+        <button onclick="addTask()">Tambah</button>
+    </div>
+    <div class="input-container">
+        <button onclick="backupTasks()">Backup</button>
+        <input type="file" id="fileInput" style="display:none" onchange="importTasks(event)">
+        <button onclick="document.getElementById('fileInput').click()">Import</button>
+    </div>
+    <ul id="taskList"></ul>
+    <p>by Levi Setiadi / on tele @nnnet9</p>
+    <script src="script.js"></script>
+</body>
+</html>
